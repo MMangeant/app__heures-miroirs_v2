@@ -94,33 +94,30 @@ function CardBackLino({ backStyle, seed = 1 }) {
 
 function CardFrontLino({ data, focused, seed = 1 }) {
   const fmt = `${String(data.hour).padStart(2, '0')}:${String(data.hour).padStart(2, '0')}`;
+  const numSize = focused ? 13 : 5.5;
+
   return (
-    <div style={{ position: 'absolute', inset: 0, background: 'var(--paper)', color: 'var(--ink)', overflow: 'hidden' }}>
+    <div style={{ position: 'absolute', inset: 0, background: 'var(--paper)', color: 'var(--ink)', overflow: 'visible' }}>
+      {/* Heure positionnée au-dessus de la carte par translation négative */}
+      <div style={{
+        position: 'absolute',
+        bottom: '100%',
+        left: 0, right: 0,
+        textAlign: 'center',
+        paddingBottom: focused ? 4 : 2,
+        fontFamily: 'var(--font-numeric)',
+        fontSize: numSize,
+        fontWeight: 700, letterSpacing: '0.08em',
+        color: 'var(--ink)', lineHeight: 1,
+      }}>{fmt}</div>
+
+      {/* Cadre crayonné + illustration — remplit toute la carte */}
       <StampFrame thick={focused ? 4.5 : 3} inner={focused ? 1.2 : 0.7} seed={seed}>
         <div style={{
-          position: 'absolute', inset: focused ? '10px 8px' : '5px 4px',
-          display: 'flex', flexDirection: 'column', alignItems: 'center',
-          justifyContent: 'center', textAlign: 'center',
+          position: 'absolute', inset: focused ? '12%' : '11%',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}>
-          <div style={{
-            fontFamily: 'var(--font-numeric)',
-            fontSize: focused ? 13 : 7,
-            fontWeight: 700, letterSpacing: '0.08em',
-            color: 'var(--ink)', lineHeight: 1,
-            marginBottom: focused ? 6 : 1,
-          }}>{fmt}</div>
-
-          <CarvedIcon hour={data.hour} size={focused ? 100 : 32} />
-
-          {focused && (
-            <div style={{
-              fontFamily: 'var(--font-display)',
-              fontWeight: 400, fontSize: 20,
-              color: 'var(--ink)', letterSpacing: '0.03em',
-              lineHeight: 1.1, textTransform: 'uppercase',
-              marginTop: 6,
-            }}>{data.title}</div>
-          )}
+          <CarvedIcon hour={data.hour} size="100%" />
         </div>
       </StampFrame>
     </div>

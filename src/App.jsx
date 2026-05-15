@@ -331,7 +331,7 @@ export default function App() {
   const [fontSet,   setFontSet]   = useState('carved');
   const [backStyle] = useState('eye');
   const [selectedHour, setSelectedHour] = useState(11);
-  const [revealedSet,  setRevealedSet]  = useState(() => new Set());
+  const [revealedSet,  setRevealedSet]  = useState(() => new Set(MIRROR_HOURS.map(h => h.hour)));
   const [focusedHour,  setFocusedHour]  = useState(null);
 
   const validate  = useCallback(() => {

@@ -97,20 +97,7 @@ function CardFrontLino({ data, focused, seed = 1 }) {
   const numSize = focused ? 13 : 5.5;
 
   return (
-    <div style={{ position: 'absolute', inset: 0, background: 'var(--paper)', color: 'var(--ink)', overflow: 'visible' }}>
-      {/* Heure positionnée au-dessus de la carte par translation négative */}
-      <div style={{
-        position: 'absolute',
-        bottom: '100%',
-        left: 0, right: 0,
-        textAlign: 'center',
-        paddingBottom: focused ? 4 : 2,
-        fontFamily: 'var(--font-numeric)',
-        fontSize: numSize,
-        fontWeight: 700, letterSpacing: '0.08em',
-        color: 'var(--ink)', lineHeight: 1,
-      }}>{fmt}</div>
-
+    <div style={{ position: 'absolute', inset: 0, background: 'var(--paper)', color: 'var(--ink)' }}>
       {/* Cadre crayonné + illustration — remplit toute la carte */}
       <StampFrame thick={focused ? 4.5 : 3} inner={focused ? 1.2 : 0.7} seed={seed}>
         <div style={{
@@ -124,10 +111,25 @@ function CardFrontLino({ data, focused, seed = 1 }) {
   );
 }
 
+function HourLabel({ data, focused }) {
+  const fmt = `${String(data.hour).padStart(2, '0')}:${String(data.hour).padStart(2, '0')}`;
+  const numSize = focused ? 13 : 5.5;
+  return (
+    <div style={{
+      textAlign: 'center',
+      fontFamily: 'var(--font-numeric)',
+      fontSize: numSize,
+      fontWeight: 700, letterSpacing: '0.08em',
+      color: 'var(--ink)', lineHeight: 1,
+      paddingBottom: focused ? 4 : 2,
+    }}>{fmt}</div>
+  );
+}
+
 export function LinoCard({ data, revealed, focused, backStyle, onClick }) {
-  const jitter  = focused ? 0 : (((data.hour * 37) % 7) - 3) * 0.6;
-  const jitterX = focused ? 0 : (((data.hour * 53) % 5) - 2) * 0.8;
-  const jitterY = focused ? 0 : (((data.hour * 71) % 5) - 2) * 0.8;
+  const jitter  = focused ? 0 : (((data.hour * 37) % 7) - 3) * 0.25;
+  const jitterX = focused ? 0 : (((data.hour * 53) % 5) - 2) * 0.4 + (data.hour === 0 ? 1.5 : 0);
+  const jitterY = focused ? 0 : (((data.hour * 71) % 5) - 2) * 0.4;
   const seed = (data.hour + 1) * 3 + 7;
 
   return (
@@ -140,27 +142,40 @@ export function LinoCard({ data, revealed, focused, backStyle, onClick }) {
         cursor: onClick ? 'pointer' : 'default',
         transform: `rotate(${jitter}deg) translate(${jitterX}px, ${jitterY}px)`,
         transition: 'transform 250ms ease',
-        perspective: '600px',
+        overflow: 'visible',
       }}
     >
+      {/* Heure hors flux, au-dessus de la carte — uniquement en mode focused */}
+      {revealed && focused && (
+        <div style={{ position: 'absolute', bottom: '100%', left: 0, right: 0 }}>
+          <HourLabel data={data} focused={focused} />
+        </div>
+      )}
+
+      {/* Carte carrée */}
       <div style={{
         position: 'absolute', inset: 0,
-        transformStyle: 'preserve-3d',
-        transform: revealed ? 'rotateY(180deg)' : 'rotateY(0deg)',
-        transition: 'transform 700ms cubic-bezier(.4,0,.2,1)',
+        perspective: '600px',
       }}>
         <div style={{
           position: 'absolute', inset: 0,
-          backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
+          transformStyle: 'preserve-3d',
+          transform: revealed ? 'rotateY(180deg)' : 'rotateY(0deg)',
+          transition: 'transform 700ms cubic-bezier(.4,0,.2,1)',
         }}>
-          <CardBackLino backStyle={backStyle} seed={seed} />
-        </div>
-        <div style={{
-          position: 'absolute', inset: 0,
-          backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
-          transform: 'rotateY(180deg)',
-        }}>
-          <CardFrontLino data={data} focused={focused} seed={seed} />
+          <div style={{
+            position: 'absolute', inset: 0,
+            backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
+          }}>
+            <CardBackLino backStyle={backStyle} seed={seed} />
+          </div>
+          <div style={{
+            position: 'absolute', inset: 0,
+            backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
+            transform: 'rotateY(180deg)',
+          }}>
+            <CardFrontLino data={data} focused={focused} seed={seed} />
+          </div>
         </div>
       </div>
     </div>

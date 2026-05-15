@@ -78,9 +78,6 @@ const ICON_PATHS = {
     <g>
       {/* Moitié gauche — sombre */}
       <path d="M0 0 L50 0 L50 100 L0 100 Z" />
-      {/* Hachures côté sombre */}
-      <path d="M5 0 L5 100 M12 0 L12 100 M19 0 L19 100 M26 0 L26 100 M33 0 L33 100 M40 0 L40 100 M47 0 L47 100"
-        stroke="var(--paper)" strokeWidth="0.6" fill="none" opacity="0.2" />
       {/* Main gauche — claire sur fond sombre */}
       <path d="M8 60 C8 52 12 46 18 44 L20 44 C20 48 20 52 22 54 L22 46 C22 42 24 40 26 40 C28 40 30 42 30 46 L30 54 C32 52 32 48 32 44 L34 46 C38 50 42 58 42 68 L38 72 C36 70 32 68 26 68 C20 68 14 70 12 72 Z" fill="var(--paper)" />
       {/* Hachures main gauche */}
@@ -108,8 +105,6 @@ const ICON_PATHS = {
     <g>
       {/* Ciel — fond de texture légère */}
       <path d="M0 0 L100 0 L100 60 Q85 55 70 58 Q55 52 40 56 Q25 50 10 54 L0 52 Z" />
-      <path d="M2 2 L2 50 M8 2 L8 50 M14 2 L14 50 M20 2 L20 50 M26 2 L26 50 M32 2 L32 50 M38 2 L38 50 M44 2 L44 50 M50 2 L50 50 M56 2 L56 50 M62 2 L62 50 M68 2 L68 50 M74 2 L74 50 M80 2 L80 50 M86 2 L86 50 M92 2 L92 50 M98 2 L98 50"
-        stroke="var(--paper)" strokeWidth="0.5" fill="none" opacity="0.18" />
       {/* Oiseaux/mots qui s'échappent */}
       <path d="M30 38 C28 34 24 32 22 34 C24 32 30 30 32 34 Z" fill="var(--paper)" />
       <path d="M46 28 C44 24 40 22 38 24 C40 22 46 20 48 24 Z" fill="var(--paper)" />
@@ -118,8 +113,6 @@ const ICON_PATHS = {
       <path d="M38 44 C36 40 32 38 30 40 C32 38 38 36 40 40 Z" fill="var(--paper)" />
       {/* Sol sombre */}
       <path d="M0 72 L100 72 L100 100 L0 100 Z" />
-      <path d="M4 74 L4 100 M10 74 L10 100 M16 74 L16 100 M22 74 L22 100 M28 74 L28 100 M34 74 L34 100 M40 74 L40 100 M46 74 L46 100 M52 74 L52 100 M58 74 L58 100 M64 74 L64 100 M70 74 L70 100 M76 74 L76 100 M82 74 L82 100 M88 74 L88 100 M94 74 L94 100"
-        stroke="var(--paper)" strokeWidth="0.6" fill="none" opacity="0.3" />
       {/* Silhouette — corps penché en arrière, bouche ouverte */}
       {/* Tronc penché */}
       <path d="M35 90 C36 82 40 74 46 68 C50 64 56 62 60 58 C56 64 54 70 54 76 L56 76 C58 70 62 64 66 60 L68 64 C64 70 62 78 62 86 L58 90 Z" />
@@ -229,9 +222,6 @@ const ICON_PATHS = {
     <g>
       {/* Paysage de fond — collines sombres */}
       <path d="M0 100 L0 62 C10 58 20 60 30 56 C38 52 44 48 50 50 C56 52 62 50 72 48 C80 46 90 50 100 48 L100 100 Z" />
-      {/* Hachures collines */}
-      <path d="M4 66 L4 100 M10 64 L10 100 M16 64 L16 100 M22 66 L22 100 M28 62 L28 100 M34 60 L34 100 M40 58 L40 100 M46 58 L46 100 M52 58 L52 100 M58 56 L58 100 M64 56 L64 100 M70 56 L70 100 M76 56 L76 100 M82 56 L82 100 M88 56 L88 100 M94 56 L94 100"
-        stroke="var(--paper)" strokeWidth="0.7" fill="none" opacity="0.35" />
       {/* 7 chemins/rivières qui rayonnent vers les bords */}
       <path d="M50 62 C44 56 36 48 24 38 C18 32 10 28 4 22" stroke="var(--paper)" strokeWidth="2" fill="none" />
       <path d="M50 62 C46 54 42 44 38 32 C34 22 32 12 30 4" stroke="var(--paper)" strokeWidth="2" fill="none" />
@@ -398,9 +388,6 @@ const ICON_PATHS = {
     <g>
       {/* Sol — bande centrale */}
       <path d="M0 52 L100 52 L100 56 L0 56 Z" />
-      {/* Ciel au-dessus — hachures douces */}
-      <path d="M0 2 L0 52 M6 2 L6 52 M12 2 L12 52 M18 2 L18 52 M24 2 L24 52 M30 2 L30 52 M36 2 L36 52 M42 2 L42 52 M48 2 L48 52 M54 2 L54 52 M60 2 L60 52 M66 2 L66 52 M72 2 L72 52 M78 2 L78 52 M84 2 L84 52 M90 2 L90 52 M96 2 L96 52"
-        stroke="var(--ink)" strokeWidth="0.5" fill="none" opacity="0.08" />
       {/* Soleil au zénith */}
       <path d="M50 6 L52 12 L58 12 L53 16 L55 22 L50 18 L45 22 L47 16 L42 12 L48 12 Z" />
       {/* Halo soleil */}
@@ -420,8 +407,6 @@ const ICON_PATHS = {
       <path d="M74 8 C76 2 72 -2 66 2 C62 6 64 14 70 14 C74 14 76 10 74 8 Z" />
       {/* Sous-sol sombre */}
       <path d="M0 56 L100 56 L100 100 L0 100 Z" />
-      <path d="M4 60 L4 100 M10 60 L10 100 M16 60 L16 100 M22 60 L22 100 M28 60 L28 100 M34 60 L34 100 M40 60 L40 100 M46 60 L46 100 M52 60 L52 100 M58 60 L58 100 M64 60 L64 100 M70 60 L70 100 M76 60 L76 100 M82 60 L82 100 M88 60 L88 100 M94 60 L94 100"
-        stroke="var(--paper)" strokeWidth="0.7" fill="none" opacity="0.3" />
       {/* Racines — miroir des branches */}
       <path d="M46 68 C38 76 28 82 18 86" stroke="var(--paper)" strokeWidth="4" fill="none" />
       <path d="M48 72 C44 82 38 90 30 96" stroke="var(--paper)" strokeWidth="3" fill="none" />
@@ -527,9 +512,6 @@ const ICON_PATHS = {
     <g>
       {/* Fond sombre — nuit de l'attachement */}
       <path d="M0 0 L100 0 L100 100 L0 100 Z" />
-      {/* Hachures fond */}
-      <path d="M4 0 L4 100 M10 0 L10 100 M16 0 L16 100 M22 0 L22 100 M28 0 L28 100 M34 0 L34 100 M40 0 L40 100 M46 0 L46 100 M52 0 L52 100 M58 0 L58 100 M64 0 L64 100 M70 0 L70 100 M76 0 L76 100 M82 0 L82 100 M88 0 L88 100 M94 0 L94 100"
-        stroke="var(--paper)" strokeWidth="0.5" fill="none" opacity="0.12" />
       {/* Flamme du désir — droite, haute */}
       <path d="M74 20 C70 26 64 34 64 44 C64 52 68 56 72 58 C70 52 70 46 72 40 C74 34 76 28 74 20 Z" fill="var(--paper)" />
       <path d="M72 34 C70 38 68 44 70 50 C72 54 74 56 74 58 C74 56 76 52 76 46 C76 40 74 36 72 34 Z" />
@@ -563,8 +545,6 @@ const ICON_PATHS = {
     <g>
       {/* Ciel de tempête — très dense */}
       <path d="M0 0 L100 0 L100 44 C90 38 82 42 74 36 C66 30 58 36 50 30 C42 24 34 30 26 24 C18 18 10 24 0 20 Z" />
-      <path d="M2 2 L2 38 M8 2 L8 38 M14 2 L14 38 M20 2 L20 38 M26 2 L26 36 M32 2 L32 34 M38 2 L38 34 M44 2 L44 32 M50 2 L50 32 M56 2 L56 34 M62 2 L62 36 M68 2 L68 38 M74 2 L74 38 M80 2 L80 40 M86 2 L86 42 M92 2 L92 44 M98 2 L98 44"
-        stroke="var(--paper)" strokeWidth="0.7" fill="none" opacity="0.35" />
       {/* Tour — avant l'impact */}
       <path d="M32 96 L32 48 L36 44 L40 48 L40 44 L50 36 L60 44 L60 48 L64 44 L68 48 L68 96 Z" />
       {/* Fenêtres évidées */}
@@ -596,9 +576,6 @@ const ICON_PATHS = {
     <g>
       {/* Ciel nocturne */}
       <path d="M0 0 L100 0 L100 55 L0 55 Z" />
-      {/* Hachures ciel nuit */}
-      <path d="M3 0 L3 55 M8 0 L8 55 M13 0 L13 55 M18 0 L18 55 M23 0 L23 55 M28 0 L28 55 M33 0 L33 55 M38 0 L38 55 M43 0 L43 55 M48 0 L48 55 M53 0 L53 55 M58 0 L58 55 M63 0 L63 55 M68 0 L68 55 M73 0 L73 55 M78 0 L78 55 M83 0 L83 55 M88 0 L88 55 M93 0 L93 55 M98 0 L98 55"
-        stroke="var(--paper)" strokeWidth="0.5" fill="none" opacity="0.18" />
       {/* Étoile polaire — grande, brillante, structurée */}
       <path d="M50 8 L52.5 18 L62 20 L52.5 22 L50 32 L47.5 22 L38 20 L47.5 18 Z" fill="var(--paper)" />
       {/* Rayons de l'étoile polaire */}
@@ -638,9 +615,6 @@ const ICON_PATHS = {
     <g>
       {/* Ciel nocturne total */}
       <path d="M0 0 L100 0 L100 100 L0 100 Z" />
-      {/* Hachures nuit dense */}
-      <path d="M3 0 L3 100 M8 0 L8 100 M13 0 L13 100 M18 0 L18 100 M23 0 L23 100 M28 0 L28 100 M33 0 L33 100 M38 0 L38 100 M43 0 L43 100 M48 0 L48 100 M53 0 L53 100 M58 0 L58 100 M63 0 L63 100 M68 0 L68 100 M73 0 L73 100 M78 0 L78 100 M83 0 L83 100 M88 0 L88 100 M93 0 L93 100 M98 0 L98 100"
-        stroke="var(--paper)" strokeWidth="0.5" fill="none" opacity="0.15" />
       {/* Halo lunaire — cercles concentriques */}
       <path d="M50 32 C60 32 68 40 68 50 C68 60 60 68 50 68 C40 68 32 60 32 50 C32 40 40 32 50 32 Z" stroke="var(--paper)" strokeWidth="0.8" fill="none" opacity="0.3" />
       <path d="M50 24 C64 24 76 36 76 50 C76 64 64 76 50 76 C36 76 24 64 24 50 C24 36 36 24 50 24 Z" stroke="var(--paper)" strokeWidth="0.6" fill="none" opacity="0.2" />
@@ -710,8 +684,6 @@ const ICON_PATHS = {
       {/* Motif mur de briques */}
       <path d="M0 14 L100 14 M0 28 L100 28 M0 42 L100 42 M0 56 L100 56 M0 70 L100 70 M0 84 L100 84"
         stroke="var(--paper)" strokeWidth="1" fill="none" opacity="0.2" />
-      <path d="M0 7 L0 21 M16 0 L16 28 M32 7 L32 21 M48 0 L48 28 M64 7 L64 21 M80 0 L80 28 M96 7 L96 21 M8 21 L8 35 M24 14 L24 42 M40 21 L40 35 M56 14 L56 42 M72 21 L72 35 M88 14 L88 42 M4 35 L4 49 M20 28 L20 56 M36 35 L36 49 M52 28 L52 56 M68 35 L68 49 M84 28 L84 56"
-        stroke="var(--paper)" strokeWidth="0.6" fill="none" opacity="0.15" />
       {/* Cadre de l'horloge */}
       <path d="M50 50 C30 50 14 38 14 24 C14 10 30 0 50 0 C70 0 86 10 86 24 C86 38 70 50 50 50 Z" fill="var(--paper)" />
       <path d="M50 50 C30 50 14 38 14 24 C14 10 30 0 50 0 C70 0 86 10 86 24 C86 38 70 50 50 50 Z" stroke="var(--ink)" strokeWidth="3" fill="none" />
@@ -793,9 +765,6 @@ const ICON_PATHS = {
     <g>
       {/* Plan architectural en fond */}
       <path d="M0 0 L100 0 L100 100 L0 100 Z" />
-      {/* Grille du plan */}
-      <path d="M10 10 L90 10 L90 90 L10 90 L10 10 Z M10 30 L90 30 M10 50 L90 50 M10 70 L90 70 M30 10 L30 90 M50 10 L50 90 M70 10 L70 90"
-        stroke="var(--paper)" strokeWidth="0.6" fill="none" opacity="0.25" />
       {/* Temple dessiné sur le plan */}
       <path d="M20 80 L20 50 L80 50 L80 80 M20 50 L50 28 L80 50 M30 80 L30 50 M40 80 L40 50 M60 80 L60 50 M70 80 L70 50"
         stroke="var(--paper)" strokeWidth="1.2" fill="none" opacity="0.4" />
@@ -832,9 +801,6 @@ const ICON_PATHS = {
     <g>
       {/* Ciel de vent — nuages en mouvement */}
       <path d="M0 0 L100 0 L100 38 C90 32 80 36 70 30 C60 24 50 30 40 24 C30 18 20 24 10 18 L0 22 Z" />
-      {/* Hachures ciel */}
-      <path d="M2 2 L2 30 M8 2 L8 30 M14 2 L14 32 M20 2 L20 34 M26 2 L26 36 M32 2 L32 34 M38 2 L38 32 M44 2 L44 30 M50 2 L50 32 M56 2 L56 34 M62 2 L62 36 M68 2 L68 34 M74 2 L74 32 M80 2 L80 30 M86 2 L86 28 M92 2 L92 26 M98 2 L98 24"
-        stroke="var(--paper)" strokeWidth="0.7" fill="none" opacity="0.35" />
       {/* Lignes de vent — horizontales qui courent */}
       <path d="M0 18 C20 14 40 18 60 14 C74 12 88 16 100 12" stroke="var(--paper)" strokeWidth="2" fill="none" />
       <path d="M0 28 C16 24 36 28 56 22 C70 18 86 22 100 18" stroke="var(--paper)" strokeWidth="1.5" fill="none" opacity="0.7" />
